@@ -37,6 +37,7 @@ public class DeptController_Consumer {
     @RequestMapping(value="/consumer/dept/list")
     public List<Dept> list()
     {
+        System.out.println("----123");
         return restTemplate.getForObject(REST_URL_PREFIX+"/dept/list", List.class);
     }
 
