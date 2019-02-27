@@ -30,7 +30,7 @@ public class DeptController
     public List<Dept> list()
     {
         List<Dept> list = service.list();
-        System.out.println("---66--");
+        System.out.println("-hh --6677--");
         return list;
     }
 

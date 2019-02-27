@@ -17,7 +17,7 @@
         <dependency><!-- 引入自己定义的api通用包，可以使用Dept部门Entity -->
             <groupId>com.atguigu.springcloud</groupId>
             <artifactId>microservicecloud-api</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>$(project.version)</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
