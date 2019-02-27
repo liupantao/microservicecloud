@@ -10,9 +10,10 @@ import java.io.Serializable;
 /**部门
  *
  */
+@SuppressWarnings("serial")
 @NoArgsConstructor
 @Data
-@Accessors(chain = true) //支持链式调用
+@Accessors(chain=true)//支持链式调用
 public class Dept implements Serializable {
 
     private Long  deptno;   //主键

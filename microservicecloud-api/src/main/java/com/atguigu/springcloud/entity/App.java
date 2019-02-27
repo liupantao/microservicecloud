@@ -1,4 +1,4 @@
-package com.atguigu.springcloud;
+package com.atguigu.springcloud.entity;
 
 /**
  * Hello world!
