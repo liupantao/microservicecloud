@@ -4,18 +4,11 @@
 
   <groupId>com.atguigu.springcloud</groupId>
   <artifactId>microservicecloud</artifactId>
-  <version>$(project.version)</version>
-  <modules>
-    <module>microservicecloud-api</module>
-    <module>microservicecloud-provider-dept-8001</module>
-    <module>microservicecloud-consumer-dept-80</module>
-      <module>microservicecloud-eureka-7001</module>
-  </modules>
+  <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
 
   <properties>
-    <project.version>0.0.1-SNAPSHOT</project.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
@@ -73,5 +66,35 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
+
+  <build>
+    <finalName>microservicecloud</finalName>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <configuration>
+          <delimiters>
+            <delimit>$</delimit>
+          </delimiters>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <modules>
+    <module>microservicecloud-api</module>
+    <module>microservicecloud-provider-dept-8001</module>
+    <module>microservicecloud-consumer-dept-80</module>
+    <module>microservicecloud-eureka-7001</module>
+  </modules>
+
+
 </project>
 
